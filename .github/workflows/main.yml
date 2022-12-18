@@ -1,5 +1,5 @@
 name: CI
-working-directory: ./nav
+# working-directory: ./nav
 on:
   push:
     branches: [main]
