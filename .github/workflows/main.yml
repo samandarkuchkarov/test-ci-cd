@@ -28,8 +28,8 @@ jobs:
           cache: yarn
       - uses: actions/cache@v2
         with:
-         path: '**/nav/node_modules'
-         key: ${{ runner.os }}-modules-${{ hashFiles('**/nav/yarn.lock') }}
+         path: '**/node_modules'
+         key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Run linters
@@ -52,7 +52,7 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: '**/nav/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/nav/yarn.lock') }}
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       # - name: Build applications
