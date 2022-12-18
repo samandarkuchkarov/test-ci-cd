@@ -14,7 +14,7 @@ env:
   NODE_VERSION: '16.18.0'
 defaults:
   run:
-    working-directory: nav
+    working-directory: ./nav
 jobs:
   test:
     runs-on: ubuntu-latest
