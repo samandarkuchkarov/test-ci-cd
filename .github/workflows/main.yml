@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: yarn
+          cache-dependency-path: nav/yarn.lock
       - uses: actions/cache@v2
         with:
          path: '**/node_modules'
