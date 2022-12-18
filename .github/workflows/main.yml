@@ -14,7 +14,7 @@ env:
   NODE_VERSION: '16.18.0'
 defaults:
   run:
-    working-directory: ./nav
+    working-directory: nav
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -51,7 +51,7 @@ jobs:
           cache: yarn
       - uses: actions/cache@v2
         with:
-          path: '**/nav/node_modules'
+          path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install dependencies
         run: yarn install --frozen-lockfile
