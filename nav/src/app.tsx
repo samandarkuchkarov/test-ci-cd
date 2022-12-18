@@ -15,6 +15,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Home} from './screens/home';
 import {navigator} from './navigator';
+import {Screen} from './screens/screen';
 import {RootStackParamList} from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -30,7 +31,7 @@ const App = () => {
       <NavigationContainer ref={navigator}>
         <Stack.Navigator screenOptions={basicScreenOptions}>
           <Stack.Screen name="home" component={Home} />
-          {/* <Stack.Screen name="screen" component={Screen} /> */}
+          <Stack.Screen name="screen" component={Screen} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
