@@ -31,7 +31,7 @@ const App = () => {
       <NavigationContainer ref={navigator}>
         <Stack.Navigator screenOptions={basicScreenOptions}>
           <Stack.Screen name="home" component={Home} />
-          <Stack.Screen name="screen" component={Screen} />
+          {/* <Stack.Screen name="screen" component={Screen} /> */}
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
