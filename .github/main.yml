@@ -1,19 +1,17 @@
 name: CI
-
+working-directory: ./nav
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-defaults:
-  run:
-    working-directory: nav
+
 concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true
 
 env:
-  NODE_VERSION: '16.17.1'
+  NODE_VERSION: '16.18.0'
 
 jobs:
   test:
